@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:root{
+    --shadow-1: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --shadow-2: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    --shadow-3: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+body{
+    background-color: #e9e9e9;
+}
+.accordion{
+    width: 600px;
+    margin: 200px auto 0;
+}
+.accordion .accordion-item{
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-2);
+   
+}
+.accordion .accordion-item .accordion-header{
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9e9e9;
+    cursor: pointer;
+    position: relative;
+}
+.accordion .accordion-item .accordion-header::after{
+    content: '\2192';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 20px;
+    transition: .3s;
+  
+}
+.accordion .accordion-item .accordion-header.active::after{
+    transform: rotate(90deg);
+}
+.accordion .accordion-item .accordion-body{
+    transition: .3s;
+    height: 0;
+    overflow: hidden;
+   
+}
+.accordion .accordion-item .accordion-body .accordion-content{
+    padding: 15px 20px;
+}

@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+:root{
+    --shadow-1: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --shadow-2: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    --shadow-3: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+body{
+    background-color: #e9e9e9;
+}
+
+.fiverr-wrapper{
+    width: 600px;
+    margin: 200px auto;
+}
+form{
+    display: inline-flex;
+}
+.counter{
+    text-align: center;
+    font-size: 80px;
+}
+.counter span{
+    font-size: 100px;
+    text-align: center;
+    font-weight: 200;
+    vertical-align: middle;
+}

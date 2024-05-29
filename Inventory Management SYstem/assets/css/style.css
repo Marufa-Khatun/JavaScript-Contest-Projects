@@ -1,0 +1,24 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  
+}
+li{
+  list-style: none;
+}
+
+.products img{
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+ 
+}
+
+
+.modal-body img{
+  height: 80px;
+  width:80px;
+  object-fit: cover;
+  border-radius: 50%;
+}

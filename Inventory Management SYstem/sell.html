@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell Collection</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+      <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.7/datatables.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="sells my-5">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#sell-create"
+            >
+             Sell Product
+            </button>
+            <button
+              class="btn btn-outline-secondary"  >
+            <a href="index.html" style="text-decoration: none;">Product List</a> 
+            </button>
+
+            <br />
+            <br />
+            <div class="card shadow ">
+              <div class="card-header">
+                <h2>Sell List</h2>
+              </div>
+              <div class="card-body">
+                <table class="table" id="sellTable">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Location</th>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                      <th>Created At</th>
+                      <th>Action</th>
+                    </tr>
+                    
+                  </thead>
+                  <tbody id="sell-data-list"></tbody>
+                  
+                  
+                  
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      
+    
+
+    <div class="modal fade" id="sell-create">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Sell Product</h2>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="msg"></div>
+            <form id="sell-create-form">
+              <div class="my-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  placeholder="ID"
+                  name="id"
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Customer Name"
+                  name="name"
+                />
+              </div>
+              
+              <div class="my-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Customer Email"
+                  name="email"
+                />
+              </div>
+              
+              <div class="my-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Customer Location"
+                  name="location"
+                />
+              </div>
+              
+              <div class="my-3">
+               
+                <select name="product" id="product-dropdown"  class="form-control">
+                  <option value="">--select product--</option>
+                </select>
+              </div>
+              <div class="my-3">
+                <label for="available-quantity">Available Quantity:</label>
+                <input type="text" id="available-quantity" readonly class="form-control">
+                <input type="tex" name="quantity" id="quantity"  class="form-control" min="0">
+              </div>
+              <div class="my-3">
+                <label for="price">Total Price:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Total Price"
+                  name="price"
+                  id="price"
+                />
+              </div>
+              <div class="my-3">
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="Date"
+                  name="date"
+                />
+              </div>
+              
+              <div class="my-3">
+                <button type="submit" class="btn btn-primary ">Sell</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+ 
+
+    <div class="modal fade" id="sell-show">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h2>Single Sell View</h2>
+                  <div class="btn-close" data-bs-dismiss="modal"></div>
+              </div>
+              <div class="modal-body">
+                  <div class="sell-data ">
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+  
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.7/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/data.js"></script>
+    <script src="./src/functions.js"></script>
+    <script src="./src/models.js"></script>
+    <script src="./src/sell.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('#sellTable').DataTable();
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+ 
